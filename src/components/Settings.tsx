@@ -3,15 +3,7 @@ import { Link } from "react-router-dom";
 
 const Settings: React.FC = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "100vh",
-      }}
-    >
+    <div>
       <p>Settings Page</p>
       <Link to="/">Back</Link>
     </div>

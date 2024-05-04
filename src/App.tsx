@@ -23,36 +23,48 @@ const App: React.FC = () => {
 
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
+      <div className="flex flex-col h-screen justify-between">
+        <nav className="bg-gray-800 text-white p-4">
+          <ul className="flex justify-around space-x-4">
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" className="hover:text-blue-500">
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/dashboard">Dashboard</Link>
+              <Link to="/dashboard" className="hover:text-blue-500">
+                Dashboard
+              </Link>
             </li>
             <li>
-              <Link to="/settings">Settings</Link>
+              <Link to="/settings" className="hover:text-blue-500">
+                Settings
+              </Link>
             </li>
           </ul>
         </nav>
-        <SignedOut>
-          <SignInButton mode="modal" />
-        </SignedOut>
+        <div className="flex flex-col justify-center items-center min-h-[50vh]">
+          <SignedOut>
+            <SignInButton mode="modal" />
+          </SignedOut>
+          <SignedIn>
+            <UserButton afterSignOutUrl="/" />
+          </SignedIn>
+        </div>
         <SignedIn>
-          <UserButton afterSignOutUrl="/" />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route
-              path="/dashboard"
-              element={isSignedIn ? <Dashboard /> : <Navigate to="/" />}
-            />
-            <Route
-              path="/settings"
-              element={isSignedIn ? <Settings /> : <Navigate to="/" />}
-            />
-          </Routes>
+          <div className="p-4">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route
+                path="/dashboard"
+                element={isSignedIn ? <Dashboard /> : <Navigate to="/" />}
+              />
+              <Route
+                path="/settings"
+                element={isSignedIn ? <Settings /> : <Navigate to="/" />}
+              />
+            </Routes>
+          </div>
         </SignedIn>
       </div>
     </Router>
