@@ -12,7 +12,7 @@ This template should help get you started developing with Tauri, React and Types
 
 ### To Do
 
-- [ ] Add tailwind
+- [x] Add tailwind
 - [ ] Write A blog Post
 - [ ] Layout a Docs page for Clerk and/or Tauri
 - [ ] Rust logic for user context
