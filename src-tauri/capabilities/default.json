@@ -1,0 +1,21 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "local": true,
+  "name": "default",
+  "webviews": ["main", "popup"],
+  "windows": ["main"],
+  "description": "Capability for the main window",
+  "permissions": [
+    "core:app:default",
+    "core:path:default",
+    "core:event:default",
+    "core:window:default",
+    "core:image:default",
+    "core:resources:default",
+    "core:menu:default",
+    "core:tray:default",
+    "cors-fetch:default",
+    "shell:allow-open"
+  ]
+}

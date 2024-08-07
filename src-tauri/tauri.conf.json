@@ -1,0 +1,61 @@
+{
+  "productName": "clerk-auth-v2",
+  "version": "0.0.0",
+  "identifier": "com.clerk-tauri.dev",
+  "build": {
+    "beforeDevCommand": "bun run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "bun run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "withGlobalTauri": true,
+
+    "windows": [
+      {
+        "title": "clerk-auth-v2",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "security": {
+      "csp": {
+        "default-src": [
+          "'self'",
+          "ipc: http://ipc.localhost",
+          "https://img.clerk.com"
+        ],
+        "connect-src": [
+          "'self'",
+          "ipc: http://ipc.localhost",
+          "ipc: http://ipc.localhost/plugin",
+          "https://*.skill-issue.dev",
+          "https://img.clerk.com/*"
+        ],
+        "style-src": [
+          "'self'",
+          "'unsafe-inline'",
+          "https://fonts.googleapis.com"
+        ],
+        "font-src": ["https://fonts.gstatic.com"],
+        "script-src": [
+          "'self'",
+          "https://*.skill-issue.dev",
+          "https://img.clerk.com"
+        ],
+        "worker-src": ["blob: 'self'", "blob: http://tauri.localhost/*"]
+      }
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}
