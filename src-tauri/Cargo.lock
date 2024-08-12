@@ -355,6 +355,7 @@ dependencies = [
  "tauri-plugin-cors-fetch",
  "tauri-plugin-deep-link",
  "tauri-plugin-shell",
+ "url",
  "webbrowser",
 ]
 
