@@ -57,5 +57,21 @@
       "icons/icon.icns",
       "icons/icon.ico"
     ]
+  },
+  "plugins": {
+    "tauri-plugin-bun": {
+      "active": true,
+      "bunVersion": "0.1.0",
+      "bunPath": "bun"
+    },
+    "deep-link": {
+      "mobile": [
+        { "host": "accounts.skill-issue.dev", "pathPrefix": ["/sign-in"] },
+        { "host": "*.skill-issue.dev" }
+      ],
+      "desktop": {
+        "schemes": ["something", "my-tauri-app"]
+      }
+    }
   }
 }

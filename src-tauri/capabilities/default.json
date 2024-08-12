@@ -3,6 +3,7 @@
   "identifier": "default",
   "local": true,
   "name": "default",
+  "platforms": ["linux", "macOS", "windows"],
   "webviews": ["main", "popup"],
   "windows": ["main"],
   "description": "Capability for the main window",
